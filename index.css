@@ -1,3 +1,5 @@
+/* NAVBAR */
+
 /* Pulse from http://ianlunn.github.io/Hover/*/
 @-webkit-keyframes hvr-pulse {
   /* 25% {
@@ -95,10 +97,12 @@ svg {
   /* transition: transform .2s; */
   position: center;
   width: 40px;
+  color: #4d648d;
 }
 svg:hover {
   transform: scale(1.2);
-  /* background-color: #283655; */
+  color: #283655;
+  /* background-color:  */
   /* color: #ffffff; */
 }
 
@@ -119,25 +123,57 @@ border-radius: 6px;
 
 body {
   background-color: #d0e1f9;
-  color: #1e1f26; 
+  color: #1e1f26;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: 30px 1fr;
 }
 
 main {
- 
-}
-
-#maintitle {
-  font-family: "Codystar", cursive;
-  grid-row: 3;
-  grid-column: 1 / 8;
-}
-
-.photo {
+  /* display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr); */
   grid-row: 2;
-  grid-column: 10 / 12;
+  grid-column: 1 / 12;
+  margin-top: 25px;
+}
+
+#about {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 25px 1fr 25px;
+
+  /* grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr); */
+}
+
+.maintitle {
+  font-family: "Codystar", cursive;
+  font-size: large;
+}
+.blurb {
+  grid-column: 1/4;
+  grid-row: 2 /4;
+}
+
+.photocontainer {
+  grid-column: 4 / 6;
+}
+
+.funfactbutton {
+  grid-row: span;
+}
+#skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#portrait {
+  width: 300px;
+  float: right;
+}
+.photo {
+  grid-column: 4;
   display: inline-block;
 }
 
@@ -156,15 +192,22 @@ li {
 }
 
 #navbar {
-    display: flex;
+  /* border: 1px dotted #4D648D; */
+  font-weight: bold;
+
+  display: flex;
   justify-content: flex-end;
   font-size: 14px;
   position: fixed;
-  left:0;
-  right:0;
-  top:0;
+  left: 0;
+  right: 0;
+  top: 0;
   grid-row: 1;
   grid-column: 12;
+  /* background-color: #d0e1f9; */
+
+  /* background-image: linear-gradient(to right, #d0e1f9, #e2edfb); */
+  background-image: linear-gradient(#ffffff, #d0e1f9);
 }
 #navbar a:hover {
   color: #d0e1f9;
@@ -174,22 +217,13 @@ li {
 }
 
 a {
-  color: #1e1f26;
+  color: #4d648d;
   text-decoration: none;
 }
 #title {
   font-size: 20px;
   /* grid-row: 4;
     grid-column: 7; */
-}
-
-main {
-  /* display: grid;
-    grid-template-columns: repeat(5, 20%);
-    grid-template-rows: repeat(10, 1fr) */
-  grid-row: 2;
-  grid-column: 1 / 12;
-  margin-top: 25px;
 }
 
 /* monotone effect on photo */
@@ -206,8 +240,8 @@ main {
 } */
 
 .contact > li {
-  display: inline;
-  vertical-align: middle;
+  /* display: inline;
+  vertical-align: middle; */
 }
 
 .button {
@@ -224,7 +258,6 @@ main {
   transform: scale(1.2);
 }
 
-.img,
 .giphy {
   width: 300px;
 }
@@ -250,4 +283,50 @@ main {
 .blurb {
   /* grid-column: 1 / 6; */
   grid-row: 2;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 25px auto 1fr auto 25px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+#snowmantitle {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#rpstitle {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#snowmanpic {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#rpspic {
+  grid-column: 2;
+  grid-row: 3;
+}
+#contact {
+  display: flex;
+  justify-content: center;
+}
+.contacticons > ul > li {
+  /* display: flex; 
+  flex-wrap: wrap;
+  justify-content: center; */
+  display: inline;
+}
+
+.advice {
+  text-align: center;
 }
