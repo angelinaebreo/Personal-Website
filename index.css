@@ -1,83 +1,9 @@
-/* NAVBAR */
 
-/* Pulse from http://ianlunn.github.io/Hover/*/
-@-webkit-keyframes hvr-pulse {
-  /* 25% {
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-    }
-    75% {
-      -webkit-transform: scale(0.9);
-      transform: scale(0.9); 
-    }*/
-}
-@keyframes hvr-pulse {
-  /* 25% {
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-    }
-    75% {
-      -webkit-transform: scale(0.9);
-      transform: scale(0.9); 
-    }*/
-}
 .hvr-pulse {
   display: inline-block;
   vertical-align: middle;
-  /* -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);  */
-}
-.hvr-pulse:hover,
-.hvr-pulse:focus,
-.hvr-pulse:active {
-  /* -webkit-animation-name: hvr-pulse;
-    animation-name: hvr-pulse;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite; */
-}
 
-/* fade in for name
-#maintitle {
-    display: inline-block;
-    font-family: 'Montserrat';
-    font-size: 30px;
-    color: black;
-    text-transform: none;
-    margin: 0 20px;
-    opacity: 0.0;
-    animation: fadeIn ease 10s;
-    -webkit-animation: fadeIn ease 10s;
-    }
-    
-    @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    }
-    
-    @-moz-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    }
-    
-    @-webkit-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    }
-    
-    @-o-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    }
-    
-    @-ms-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    } */
+}
 
 button {
   color: #d0e1f9;
@@ -102,16 +28,9 @@ svg {
 svg:hover {
   transform: scale(1.2);
   color: #283655;
-  /* background-color:  */
-  /* color: #ffffff; */
 }
 
-/* a:hover {
-color: #D0E1F9;
-font-weight: 700;
-background-color: #283655;
-border-radius: 6px;
-} */
+
 
 * {
   margin: 0;
@@ -127,12 +46,10 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 30px 1fr;
+  padding: 20px
 }
 
 main {
-  /* display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr); */
   grid-row: 2;
   grid-column: 1 / 12;
   margin-top: 25px;
@@ -142,9 +59,6 @@ main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 25px 1fr 25px;
-
-  /* grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, 1fr); */
 }
 
 .maintitle {
@@ -222,32 +136,13 @@ a {
 }
 #title {
   font-size: 20px;
-  /* grid-row: 4;
-    grid-column: 7; */
+
 }
 
-/* monotone effect on photo */
-#photo:hover {
-  /* background-color: #283655;
-    -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  opacity: 0.9; */
-}
-
-/* a:hover {
-    color: #3A5199;
-
-} */
-
-.contact > li {
-  /* display: inline;
-  vertical-align: middle; */
-}
 
 .button {
   color: #d0e1f9;
   font-size: 15px;
-  /* font-weight: 700; */
   background-color: #4d648d;
   border-radius: 4px;
 }
@@ -266,22 +161,12 @@ a {
   display: none;
 }
 
-#snowmaninner {
-  /* color: #D0E1F9;
-    background-color: #1E1F26; */
-}
-#about {
-  /* grid-row: 4;
-    grid-column: 7; */
-}
-
 .snowmancontainer {
   grid-row: 4;
   grid-column: 6 / 10;
 }
 
 .blurb {
-  /* grid-column: 1 / 6; */
   grid-row: 2;
 }
 
@@ -294,7 +179,6 @@ a {
 .card {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
 }
 #snowmantitle {
@@ -321,12 +205,34 @@ a {
   justify-content: center;
 }
 .contacticons > ul > li {
-  /* display: flex; 
-  flex-wrap: wrap;
-  justify-content: center; */
   display: inline;
 }
 
 .advice {
   text-align: center;
+}
+
+
+@media screen and (max-width: 800px) {
+  .blurb {
+    width: 90%
+  }
+  
+  #portrait {
+    width: 80%
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .blurb {
+    width: 90%
+  }
+  #portrait {
+width: 80%
+  }
+  
+ img {
+    padding: 10px;
+    width: 70%;
+  }
 }
